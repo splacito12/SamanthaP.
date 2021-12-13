@@ -2,7 +2,7 @@
 
 Project Description:
 -This project is meant to decrypt and encrypt a message inputted by the user using an implemented key. 
-  - We will be encrypting the given message by using the Ei = (Pi + Ki) mod 26 and Di = (Ei - Ki + 26) mod 26 equation and implimenting it into our program using simple terms. We     will then use for loops for the equation and the if statements for the keyword. 
+  - We will be encrypting the given message by using the Ei = (Pi + Ki) mod 26 and Di = (Ei - Ki + 26) mod 26 equation and implimenting it into our program using simple terms. We     will then use for loops for the equation, the if statements for the keyword, and the push back function to push the given message and encryption into a vector. 
 
 Authors:
 Samantha Placito Melendrez
