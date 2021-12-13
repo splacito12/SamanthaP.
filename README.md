@@ -1,4 +1,4 @@
-# Vignere Cipher Decryption
+# Vigenere Cipher Decryption
 
 Project Description:
 -This project is meant to decrypt and encrypt a message inputted by the user using an implemented key. 
