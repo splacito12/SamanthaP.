@@ -1,0 +1,70 @@
+//Programmer: Samantha Placito
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string genKey(string str, string key)
+{
+   int z = str.size();
+
+   for (int i = 0; ; i++)
+   {
+       if (z == i)
+           i = 0;
+       if (key.size() == str.size())
+           break;
+       key.push_back(key[i]);
+   }
+   return key;
+}
+
+string encryptedText(string str, string key)
+{
+   string encrypted_text;
+
+   for (int i = 0; i < str.size(); i++)
+   {
+       char z = (str[i] + key[i]) %26;
+       z += 'A';
+       encrypted_text.push_back(z);
+    }
+
+       return encrypted_text;
+}
+
+string originalText(string encrypted_text, string key)
+{
+   string orig_text;
+
+   for (int i = 0 ; i < encrypted_text.size(); i++)
+   {
+       char z = (encrypted_text[i] - key[i] + 26) %26;
+       z += 'A';
+       orig_text.push_back(z);
+   }
+   
+   return orig_text;
+}
+
+int main()
+{
+  string str;
+
+  cout << "Please enter the message that you would like to be encrypted: ";
+  cin >> str;
+
+  string keyword = "KAMISA";
+
+  string key = genKey(str, keyword);
+  string encrypted_text = encryptedText(str, key);
+
+  cout << "\nInserted message: "
+       << originalText(encrypted_text, key) << endl;
+
+  cout << "\nKeyword: " << keyword << endl;;
+
+  cout << "\nCiphertext:" 
+       << encrypted_text << "\n" << endl;
+
+  return 0;
+}
